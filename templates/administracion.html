@@ -1,0 +1,30 @@
+<h2>Administración</h2>
+
+        <div class="btn-group btn-group-justified primero" role="group" aria-label="...">
+
+          <div ng-class="{ 'segundo': nombre == 'temas_filtros' }" class="btn-group" role="group">
+            <button type="button" class="btn btn-lg btn-default" ng-click="vista('temas_filtros')">Temas y Filtros</button>
+          </div>
+          <div ng-class="{ 'segundo': nombre == 'agregar_temas' }" class="btn-group" role="group">
+            <button type="button" class="btn btn-lg btn-default" ng-click="vista('agregar_temas')">Agregar temas</button>
+          </div>
+           <div ng-class="{ 'segundo': nombre == 'administradores' }" class="btn-group" role="group">
+            <button type="button" class="btn btn-lg btn-default" ng-click="vista('administradores')">Administradores</button>
+          </div>
+          <div ng-class="{ 'segundo': nombre == 'agregar_administrador' }" class="btn-group" role="group">
+            <button type="button" class="btn btn-lg btn-default" id="activar" ng-click="vista('agregar_administrador')">Agregar administrador</button>
+          </div>
+      </div>
+        <br>
+        <div ng-if="nombre=='agregar_administrador'">
+          <div ng-include="'templates/agregar_administrador.html'" ng-controller="AdminCtrl"></div>
+          </div>
+        <div ng-if="nombre=='agregar_temas'">
+              <div ng-include="'templates/agregar_temas.html'" ng-controller="TemaCtrl"></div>
+        </div>
+        <div ng-if="nombre=='temas_filtros'">
+              <div ng-include="'templates/temas_filtros.html'" ng-controller="AllTemaCtrl"></div>
+        </div>
+        <div ng-if="nombre=='administradores'">
+              <div ng-include="'templates/administradores.html'" ng-controller="AllAdminCtrl"></div>
+        </div>

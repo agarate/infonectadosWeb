@@ -1,0 +1,18 @@
+    <h2>Preguntas</h2>
+      <div class="btn-group btn-group-justified primero" role="group" aria-label="...">
+          <div ng-class="{ 'segundo': nombre == 'todas_preguntas' }" class="btn-group" role="group">
+            <button type="button" class="btn btn-lg btn-default" id="activar" ng-click="vista('todas_preguntas')">Todas las preguntas</button>
+          </div>
+          <div ng-class="{ 'segundo': nombre == 'agregar_preguntas' }" class="btn-group" role="group">
+            <button type="button" class="btn btn-lg btn-default" ng-click="vista('agregar_preguntas')">Nueva Pregunta</button>
+          </div>
+      </div>
+        <br>
+            <div ng-if="nombre=='todas_preguntas'">
+                  <div ng-include="'templates/todas_preguntas.html'" ng-controller="PreguntasCtrl"></div>
+
+     
+            </div>
+            <div ng-if="nombre=='agregar_preguntas'">
+              <div ng-include="'templates/agregar_preguntas.html'" ng-controller="AddPreguntasCtrl"></div>
+            </div>

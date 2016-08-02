@@ -1,0 +1,39 @@
+<nav class="navbar navbar-inverse navbar-fixed-top azul">
+</nav>
+
+
+      <div class="col-md-6 col-md-offset-3 well" style="margin-top: 5%;">
+        <h2 align="center">Regístrate</h2>
+
+          <h4><strong>Seleccione Programa al que pertenece:</strong></h4>
+          <input type="radio" ng-model="result" ng-value=1 name="rdoResult" ng-click="ob(result)" >
+          Ingeniería Civil en Informática
+          </input>
+          <input type="radio" ng-model="result" ng-value=2 name="rdoResult" ng-click="ob(result)">
+          Ingeniería de Ejecución en Computación e Informática
+          </input>
+        <h4><strong>Seleccione Jornada a la que pertenece:</strong></h4>
+          <input type="radio" ng-model="result2" ng-value=3 name="rdoResult2" ng-click="ob2(result2)">
+          Diurno
+          </input>
+          <input type="radio" ng-model="result2" ng-value=4 name="rdoResult2" ng-click="ob2(result2)">
+          Vespertino
+          </input>
+
+            <button class="btn  btn-block btn-lg btn-warning" style="margin-top:5%;" ng-click="Registrar()" ng-disabled="!result || !result2">
+              Registrar
+            </button>
+      </div>
+<footer class="footer">
+<div class="container">
+      
+    <div class="col-md-3" ><br>
+        Universidad de Santiago de Chile
+        </div>
+        <div class="col-md-9" align="right"><br>
+          Departamento de Ingeniería Informática
+        <!--<img class="img-responsive" src="bootstrap/logo-ceii.png" height="58px" width="58px">-->
+    </div>
+        </div>
+
+    </footer>

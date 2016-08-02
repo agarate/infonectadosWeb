@@ -1,0 +1,36 @@
+<nav class="navbar navbar-inverse navbar-fixed-top azul">
+</nav>
+<div id="content">
+<div class="col-md-4">
+	<img class="img-responsive imagen " src="bootstrap/escudo-usach.png" height="300px" width="300px">
+	</div>
+	<div class="col-md-4">
+		<div class="form-signin well">
+
+        <h2 align="center">Iniciar Sesión</h2>
+        <input type="text"  class="form-control" placeholder="Usuario Diinf" ng-model="user.user">
+        <input type="password"  class="form-control" placeholder="Contraseña Diinf" ng-model="user.pass">
+        <br>
+        <button class="btn btn-lg btn-block btn-warning" ng-click="signIn()" ng-disabled="!user.user || !user.pass">Ingresar</button>
+		</div>
+    <div align="center"><br>
+        <p style="line-height:30px;">Bienvenido al sistema para difusión de información entre el Departamento de 
+        Ingeniería Informática y sus estudiantes.</p>
+    </div>
+	</div>
+    <div class="col-md-4"><br><br><br>
+        <img class="img-responsive imagen " src="bootstrap/logo_diinf.JPG" height="320px" width="320px">
+
+    </div>
+
+	</div>
+<footer class="footer">
+<div class="container">
+		<div class="col-md-4" ><br>
+        Departamento de Ingeniería Informática
+        </div>
+        <div class="col-md-8" align="right"><br>
+      		<small>Desarrollado por Alex Gárate P.</small>
+		</div>
+</div>
+    </footer>

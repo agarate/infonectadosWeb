@@ -1,0 +1,23 @@
+<h2>Informaciones</h2>
+
+        <div class="btn-group btn-group-justified primero" role="group" aria-label="...">
+          <div ng-class="{ 'segundo': nombre == 'informaciones' }" class="btn-group" role="group">
+            <button type="button" class="btn btn-lg btn-default" ng-click="vista('informaciones')">Toda la información</button>
+          </div>
+          <div ng-class="{ 'segundo': nombre == 'agregar_informacion' }" ng-if="tipo=='admin'" class="btn-group" role="group">
+            <button type="button" class="btn btn-lg btn-default" ng-click="vista('agregar_informacion')">Nueva información</button>
+          </div>
+          <div ng-class="{ 'segundo': nombre == 'mi_informacion' }" ng-if="tipo=='estu'" class="btn-group" role="group">
+            <button type="button" class="btn btn-lg btn-default" ng-click="vista('mi_informacion')">Mi información</button>
+          </div>
+        </div>
+        <br>
+        <div ng-if="nombre=='informaciones'">
+          <div ng-include="'templates/toda_informacion.html'" ng-controller="MensajesCtrl"></div>
+          </div>
+        <div ng-if="nombre=='agregar_informacion'">
+              <div ng-include="'templates/agregar_informacion.html'" ng-controller="InsertarCtrl"></div>
+        </div>
+        <div ng-if="nombre=='mi_informacion'">
+              <div ng-include="'templates/mi_informacion.html'" ng-controller="MyinfoCtrl"></div>
+        </div>

@@ -1,0 +1,25 @@
+     <div class="well">
+            <h4><strong>Nuevo Tema o Filtro</strong></h4><br>
+       <div class="row">
+			<div class="col-md-6">
+	               <input class="form-control" type="text" placeholder="Ingrese nombre del tema" ng-model="tema.nombre">
+	                 
+	               </input>
+			</div>
+			<div class="col-md-3">
+	        <label class="radio-inline">
+
+	            <input type="radio" ng-model="tema.es_filtro" ng-value="'SI'" name="rdoResult" ng-click="filtro(tema.es_filtro)" ><strong >Es Filtro</strong></input>
+	        </label>
+	        <label class="radio-inline">
+	            <input type="radio" ng-model="tema.es_filtro" ng-value="'NO'" name="rdoResult" ng-click="filtro(tema.es_filtro)"><strong>No es Filtro</strong></input>
+	        </label>
+	        </div>
+	        <div class="col-md-3 ">
+		        <button class="btn btn-block btn-warning" ng-click="agregar()" ng-disabled="!tema.nombre" >
+		            Agregar
+		        </button>
+	        </div>
+        </div>
+        	
+        </div>

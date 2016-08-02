@@ -1,0 +1,38 @@
+ 
+    <div class="row">
+      <div class="col-md-6">
+        <input class="form-control" type="text" placeholder="Buscar preguntas por enunciado..." ng-model="busqueda.ENUNCIADO">
+      </div>
+      <div class="col-md-6">
+        <input class="form-control" type="text" placeholder="Buscar información  tema..." ng-model="busqueda.TEMA">
+      </div>
+    </div>
+  <br>
+ <div class="panel panel-default " ng-repeat="pregunta in preguntas | filter:busqueda:strict | orderBy: '-FECHA_PREGUNTA'" >
+
+              <div class="panel-heading">
+                <h4 style="margin-top: 0;"><strong>{{pregunta.ENUNCIADO}} </strong></h4>
+                  <div class="pull-right"><span class="glyphicon glyphicon-time"></span> {{pregunta.FECHA_PREGUNTA | date:'medium'}}</div>
+                           <blockquote > <span style="color:#F18B29">{{pregunta.TEMA}}</span> 
+                            <span class="badge">{{pregunta.IMPORTANCIA}}</span>
+                  <button class="btn btn-default" ng-click="votar(pregunta.ID_PREGUNTA,pregunta, pregunta.VOTOS)" style="color:{{pregunta.VOTADO}}">Me interesa <span class="badge" style="background-color:{{pregunta.VOTADO}}">{{pregunta.VOTOS}}</span></button></blockquote>
+              </div>
+              <div class="panel-body " ng-if="tipo=='admin'">
+              <div class="row">
+                <div class="col-md-9">
+                  <textarea class="form-control" type="text" placeholder="Respuesta..." ng-model="pregunta.RESPUESTA">
+                  
+                  </textarea>
+                </div>
+                <div class="col-md-3">
+                  <button class="btn btn-block btn-warning" ng-click="responder(pregunta.ID_PREGUNTA,pregunta.ID_USUARIO,pregunta.ENUNCIADO,pregunta.IMPORTANCIA,pregunta.TEMA,pregunta.RESPUESTA,pregunta.VOTOS)" ng-disabled="!pregunta.RESPUESTA" >
+                Responder</button>
+               </div>
+              </div>
+              </div>
+              <div class="panel-body " ng-if="tipo=='estu'">
+                 
+              <p>{{pregunta.RESPUESTA}}</p>
+               
+              </div>
+            

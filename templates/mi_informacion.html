@@ -1,0 +1,24 @@
+    <div class="row">
+      <div class="col-md-6">
+        <input class="form-control" type="text" placeholder="Buscar información según título..." ng-model="busqueda.TITULO">
+      </div>
+      <div class="col-md-6">
+        <input class="form-control" type="text" placeholder="Buscar información según tema..." ng-model="busqueda.TEMAS">
+      </div>
+    </div>
+    <br>
+    <div class="panel panel-default" ng-repeat="mensaje in mensajes_estu | filter:busqueda:strict| orderBy: '-FECHA_MENSAJE'">
+
+      <div class="panel-heading" ">
+        <h3 style="margin-top: 0;"><strong>{{mensaje.TITULO}}</strong></h3>
+        <blockquote><footer style="color:#777"> Escrito por <cite title="Source Title">{{mensaje.USUARIO}}</cite></footer></blockquote>
+        <div class="pull-right"><span class="glyphicon glyphicon-time"></span> {{mensaje.FECHA_MENSAJE | date:'medium'}}</div>
+        <span class="label label-warning" ng-repeat="tema in mensaje.TEMAS |orderBy:'toString()'">{{tema}}</span>
+      
+      </div>
+
+      <div class="panel-body">
+        <p>{{mensaje.CONTENIDO}}</p>
+      </div>
+      
+    </div>
