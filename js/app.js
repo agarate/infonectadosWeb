@@ -1,7 +1,7 @@
 angular.module('app', ['ngRoute','ngResource','angular-md5'])
  
-//configuramos las rutas del blog
-//resolve lo utilizamos para comprobar si tiene o no acceso a esa zona
+//configuramos las rutas del servidor
+
 .constant('CONFIG', {
  URL_SERVIDOR: "http://localhost/infonectadosWeb/index.php",
  KEY_LOGIN: '00e84c40ad7782afbc261ac068016a54'
