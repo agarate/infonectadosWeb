@@ -13,7 +13,7 @@ angular.module('app')
 
           $http({
               method: 'POST',
-              url: 'http://inicio.diinf.usach.cl/webservice3.php',
+              url: 'https://inicio.diinf.usach.cl/webservice3.php',
               headers: {'Content-Type': 'application/x-www-form-urlencoded'},
 
               data: 'user='+$scope.user.user+'&pass='+password+'&keyapi='+$scope.user.keyapi
