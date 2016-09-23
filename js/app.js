@@ -3,7 +3,7 @@ angular.module('app', ['ngRoute','ngResource','angular-md5'])
 //configuramos las rutas del servidor
 
 .constant('CONFIG', {
- URL_SERVIDOR: "http://localhost/infonectadosWeb/index.php",
+ URL_SERVIDOR: "http://infonectados.diinf.usach.cl/index.php",
  KEY_LOGIN: '00e84c40ad7782afbc261ac068016a54'
 })
 .run(function($rootScope, $location){
