@@ -1,7 +1,7 @@
 <?php
 
 class Pruebapush extends CI_Controller {
-/*	
+	
 public function __construct() {
 
         header('Access-Control-Allow-Origin: *');
@@ -12,7 +12,7 @@ public function __construct() {
             die();
         }
         parent::__construct();
-    }*/
+    }
 	public function index()
 	{
         $json = file_get_contents('php://input');
