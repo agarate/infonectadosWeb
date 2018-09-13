@@ -24,7 +24,7 @@ public function __construct() {
             $message = $datos['data']['mensaje']['message'];
     		$data=['title'=>$title, 'message' => $message];
 
-        	$apiKey= 'AIzaSyDQClttn7mOUCG_5Q_HqEHral_6JGu7WVs';
+        	$apiKey= '';
 
         	//Armo el mensaje
 
